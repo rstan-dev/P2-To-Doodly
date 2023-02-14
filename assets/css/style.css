@@ -29,15 +29,67 @@ body {
 }
 
 .task-list-container {
-    background-color: #fdf8db;
-    opacity: 80%;
+    background-color: rgba(253, 248, 219, 0.95);
     width: 80%;
     border-radius: 20px;
+    margin-bottom: 50px;
 }
 
 .productivity-container {
-    background-color: #131c17;
-    opacity: 80%;
+    background-color: rgba(19, 28, 23, 0.7);
     width: 80%;
-    height: 300px;
+    height: 225px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.productivity-text {
+    background-color: #111914;
+    font-family: 'Caveat Brush', sans-serif;
+    letter-spacing: 0.075em;
+    width: 215px;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-bottom: -35px;
+    color: #fdf8db;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 5;
+    border-radius: 20px;
+    font-size: 180%;
+}
+
+.calc-container {
+    padding-right: 4rem;
+    padding-bottom: 0.2rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.items-counter-text {
+    color: #fdf8db;
+    font-size: 135%;
+    opacity: 200%;
+}
+
+.items-counter-number {
+    color: #da0428;
+    font-weight: 600;
+    font-size: 140%;
+    padding-right: 5px;
+}
+
+.items-ticked-number {
+    color: #e79505;
+    font-weight: 600;
+    font-size: 140%;
+    padding-right: 5px;
+}
+
+.items-complete-percent {
+    color: #35e705;
+    font-weight: 600;
+    font-size: 140%;
+    padding-right: 5px;
 }
