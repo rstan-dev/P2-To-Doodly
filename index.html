@@ -12,14 +12,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap" rel="stylesheet">
-    <title>Project Title</title>
+    <script src="https://kit.fontawesome.com/cb51976b49.js" crossorigin="anonymous"></script>
+    <title>To-Doodly App</title>
 </head>
 
 <body>
-    <h1>Project Start Page</h1>
-    <p>test paragraph content</p>
-    <h2>heading 2 test content</h2>
-    <p>more test p content</p>
+    <h1>To-Doodly</h1>
+    <h2>everything.done.</h2>
+    <div class="task-list-container">
+        <form class="form">
+            <input type="text" class="input-text" id="input-text" placeholder="Enter something to do here..."
+                autocomplete="off">
+
+            <ul class="todo-list" id="todo-list">
+                <li class="ticked">Test item 1 from HTML
+                    <div>
+                        <i class="fa-regular fa-square"></i>
+                        <i class="fa-sharp fa-solid fa-square-check"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </li>
+
+            </ul>
+        </form>
+    </div>
+    <div class="productivity-container">
+        <div class="calc-container">
+            <p class="items-counter-text"><span class="items-counter-number">0</span>
+                Items on list</p>
+            <p class="items-ticked-text"><span class="items-ticked-number">0</span>
+                Items ticked</p>
+            <p class="percent-complete-text"><span class="items-complete-percent">0</span> % Complete</p>
+
+        </div>
+
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>

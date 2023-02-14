@@ -3,7 +3,7 @@ Blank Project README template
 # Project Name
 * Final Screenshots create on - https://ui.dev/amiresponsive
   <img src="">
-* [Link to Deployed Project](<<add_deployed_link_to_project_here>>)
+* [Link to Deployed Project](https://rstan-dev.github.io/P2-To-Doodly/)
 * Gitpod: use `python -m http.server` to preview in server
 
 ## Contents(#contents)
