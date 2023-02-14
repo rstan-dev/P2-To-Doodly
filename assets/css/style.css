@@ -35,6 +35,79 @@ body {
     margin-bottom: 50px;
 }
 
+.input-text {
+    background-color: white;
+    border: none;
+    color: #a5a7a5;
+    font-size: 2.5rem;
+    display: block;
+    width: 95%;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+.input-text::placeholder {
+    color: #cecece;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.todo-list {
+    list-style: none;
+    background-color: white;
+    border: none;
+    color: #131c17;
+    width: 95%;
+    margin: 2rem auto;
+    margin-bottom: 3rem;
+    padding-left: -2rem;
+}
+
+.todo-list li {
+    border-top: 10px solid rgb(253, 248, 219);
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.todo-list li .fa-bars {
+    color: #a5a7a5;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.todo-list li .fa-trash-can {
+    color: #a5a7a5;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.todo-list li .fa-square {
+    color: #a5a7a5;
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.todo-list li .fa-square-check {
+    color: #35e705;
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+
 .productivity-container {
     background-color: rgba(19, 28, 23, 0.7);
     width: 80%;
