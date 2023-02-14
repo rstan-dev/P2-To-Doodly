@@ -30,6 +30,7 @@ body {
 
 .task-list-container {
     background-color: rgba(253, 248, 219, 0.95);
+    max-width: 950px;
     width: 80%;
     border-radius: 20px;
     margin-bottom: 50px;
@@ -67,9 +68,10 @@ ul {
 }
 
 .todo-list li {
-    border-top: 10px solid rgb(253, 248, 219);
-    padding-left: 1.5rem;
-    font-size: 1.5rem;
+    border-bottom: 15px solid rgb(253, 248, 219);
+    padding: 1rem 10rem 1rem 1rem;
+    font-size: 2rem;
+    font-weight: 600;
     position: relative;
 }
 
@@ -84,7 +86,7 @@ ul {
 .todo-list li .fa-trash-can {
     color: #a5a7a5;
     position: absolute;
-    right: 60px;
+    right: 68px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -92,7 +94,7 @@ ul {
 .todo-list li .fa-square {
     color: #a5a7a5;
     position: absolute;
-    right: 100px;
+    right: 120px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -100,7 +102,7 @@ ul {
 .todo-list li .fa-square-check {
     color: #35e705;
     position: absolute;
-    right: 100px;
+    right: 120px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -111,6 +113,7 @@ ul {
 .productivity-container {
     background-color: rgba(19, 28, 23, 0.7);
     width: 80%;
+    max-width: 950px;
     height: 225px;
     border-radius: 20px;
     position: relative;
