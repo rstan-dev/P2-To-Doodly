@@ -1,22 +1,43 @@
-/* Standard setup for most projects  */
 * {
     box-sizing: border-box;
-    /* removes any extra width - allows for accurate padding */
+}
+
+.logo-container {
+    margin-top: -400px;
+}
+
+#logo {
+    margin: 0 auto;
+    margin-top: -50px;
+    height: 350px;
+    width: auto;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #15201a;
+    background-image: url('/assets/images/main-background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
-    /* aligns content */
     flex-direction: column;
-    /* stacks content  */
     align-items: center;
-    /* centers content */
     justify-content: center;
     height: 100vh;
-    /* takes up 100% of the viewport height  */
-    overflow: hidden;
-    /* prevents scroll bard from showing by default  */
+}
+
+.task-list-container {
+    background-color: #fdf8db;
+    opacity: 80%;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.productivity-container {
+    background-color: #131c17;
+    opacity: 80%;
+    width: 80%;
+    height: 300px;
 }

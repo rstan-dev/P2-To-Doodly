@@ -11,21 +11,38 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:wght@300;600&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/cb51976b49.js" crossorigin="anonymous"></script>
     <title>To-Doodly App</title>
 </head>
 
 <body>
-    <h1>To-Doodly</h1>
-    <h2>everything.done.</h2>
+    <div class="logo-container">
+        <img id="logo" src="assets/images/to-doodly-logo-hi-res.png" alt="to-doodly logo">
+    </div>
+
+
     <div class="task-list-container">
+
         <form class="form">
             <input type="text" class="input-text" id="input-text" placeholder="Enter something to do here..."
                 autocomplete="off">
 
             <ul class="todo-list" id="todo-list">
                 <li class="ticked">Test item 1 from HTML
+                    <div>
+                        <i class="fa-regular fa-square"></i>
+                        <i class="fa-sharp fa-solid fa-square-check"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </li>
+                <li class="">Test item 2 from HTML
                     <div>
                         <i class="fa-regular fa-square"></i>
                         <i class="fa-sharp fa-solid fa-square-check"></i>
