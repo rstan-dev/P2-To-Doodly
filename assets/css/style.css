@@ -3,14 +3,17 @@
 }
 
 .logo-container {
-    margin-top: -400px;
+    margin-top: 0;
+    height: 350px;
+    position: sticky;
 }
 
 #logo {
     margin: 0 auto;
-    margin-top: -50px;
+    margin-top: 20px;
     height: 350px;
     width: auto;
+    position: sticky;
 }
 
 body {
@@ -32,14 +35,16 @@ body {
     background-color: rgba(253, 248, 219, 0.95);
     max-width: 950px;
     width: 80%;
+    height: 700px;
     border-radius: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+
 }
 
 .input-text {
     background-color: white;
     border: none;
-    color: #a5a7a5;
+    color: #505050;
     font-size: 2.5rem;
     display: block;
     width: 95%;
@@ -48,7 +53,13 @@ body {
 }
 
 .input-text::placeholder {
-    color: #cecece;
+    color: #a5a7a5;
+}
+
+.list-container {
+    margin-top: -30px;
+    height: 500px;
+    overflow-y: scroll;
 }
 
 ul {
@@ -63,18 +74,24 @@ ul {
     color: #131c17;
     width: 95%;
     margin: 2rem auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     padding-left: -2rem;
+    font-size: 10px;
 }
 
 .todo-list li {
     border-bottom: 15px solid rgb(253, 248, 219);
     padding: 1rem 10rem 1rem 1rem;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 600;
     position: relative;
 }
 
+.controls-container {
+    display: inline-block;
+
+
+}
 .todo-list li .fa-bars {
     color: #a5a7a5;
     position: absolute;
@@ -107,8 +124,10 @@ ul {
     transform: translateY(-50%);
 }
 
-
-
+.todo-list .ticked {
+    color: #a5a7a5;
+    text-decoration: line-through;
+}
 
 .productivity-container {
     background-color: rgba(19, 28, 23, 0.7);
@@ -117,6 +136,7 @@ ul {
     height: 225px;
     border-radius: 20px;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .productivity-text {
@@ -169,3 +189,91 @@ ul {
     font-size: 140%;
     padding-right: 5px;
 }
+
+
+
+/*--------------------------------
+  Media Queries
+----------------------------------*/
+
+@media screen and (max-width: 780px) {
+    .input-text {
+        font-size: 2rem;
+    }
+
+    .todo-list li {
+        font-size: 1.75rem;
+    }
+}
+
+
+/* @media screen and (max-width: 650px) {
+
+    .input-text {
+        font-size: 1.5rem;
+    }
+
+    .todo-list li {
+        font-size: 18px;
+    }
+}
+
+
+.controls-container {
+    display: inline-block;
+
+
+}
+
+.todo-list {
+    list-style: none;
+    background-color: white;
+    border: none;
+    color: #131c17;
+    width: 95%;
+    margin: 2rem auto;
+    margin-bottom: 2rem;
+    padding-left: -2rem;
+}
+
+.todo-list li {
+    border-bottom: 15px solid rgb(253, 248, 219);
+    padding: 1rem 10rem 1rem 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.todo-list li .fa-bars {
+    color: #a5a7a5;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.todo-list li .fa-trash-can {
+    color: #a5a7a5;
+    position: absolute;
+    right: 68px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.todo-list li .fa-square {
+    color: #a5a7a5;
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.todo-list li .fa-square-check {
+    color: #35e705;
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+} */
