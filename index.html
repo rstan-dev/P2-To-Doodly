@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:wght@300;600&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/cb51976b49.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+        integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>To-Doodly App</title>
 </head>
 
@@ -25,7 +28,7 @@
     <div class="task-list-container">
 
         <form class="form">
-            <input type="text" class="input-text" id="input-text" placeholder="Enter something to do in here..."
+            <input type="text" class="input-text" id="input-text" placeholder="Enter something to do here..."
                 autocomplete="off">
 
             <div class="list-container">
@@ -109,6 +112,13 @@
     </div>
 
     <script src="assets/js/script.js"></script>
+
+    <script>
+        const dragArea = document.querySelector(".todo-list");
+        new Sortable(dragArea, {
+            animation: 350
+        });
+    </script>
 </body>
 
 </html>
