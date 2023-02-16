@@ -77,16 +77,14 @@ function createItem() {
     barsIconElement.innerHTML = `<i class="fas fa-bars"></i>`;
     listElement.appendChild(barsIconElement);
 
-
-    // squareIconElement.addEventListener("click", () => {
-    //     liElement.classList.toggle("ticked");
-
-    //     if (liElement.className === "ticked") {
-    //         squareIconElement.innerHTML = `<i class="fa-sharp fa-solid fa-square-check"></i>`
-    //     } else {
-    //         squareIconElement.innerHTML = `<i class = "fa-regular fa-square"></i>`
-    //     };
-    // });
+    squareIconElement.addEventListener("click", () => {
+        listElement.classList.toggle("ticked");
+        if (listElement.className === "ticked") {
+            squareIconElement.innerHTML = `<i class="fa-sharp fa-solid fa-square-check"></i>`
+        } else {
+            squareIconElement.innerHTML = `<i class = "fa-regular fa-square"></i>`
+        };
+    });
 
     trashIconElement.addEventListener("click", () => {
         listElement.remove();
