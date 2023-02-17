@@ -133,6 +133,8 @@ function updateLocalStorage() {
 
     updateItemsTickedCounter();
 
+    calculatePercentComplete();
+
 }
 
 
@@ -171,5 +173,38 @@ function updateItemsTickedCounter() {
     console.log(totalTicks);
 
     totalTickedItems.innerText = totalTicks;
+
+}
+
+/**  calculatePercentComplete function
+ *   Uses the same function to find the total number of
+ * ticked items
+ *   Uses the same method to call the total number of items from local storage
+ *  Calculates % using Math.round and updates the DOM via .innerText
+ */
+
+function calculatePercentComplete() {
+    const percentCompleteNumber = document.getElementById("items-complete-percent");
+
+    let todoListData = localStorage.getItem("todoList");
+
+    let todoListArray = JSON.parse(todoListData);
+    console.log(todoListArray);
+
+    function countTicks(value, todoListArray, key) {
+        return todoListArray.reduce(function (count, item) {
+            return count + (item[key] === value);
+        }, 0);
+    }
+
+    const totalTicks = countTicks(true, todoListArray, "ticked");
+
+    let totalItemsCount = JSON.parse(localStorage.todoList).length;
+
+    let percentCalculation = Math.round(totalTicks / totalItemsCount * 100);
+
+    console.log(percentCalculation);
+
+    percentCompleteNumber.innerText = percentCalculation;
 
 }
