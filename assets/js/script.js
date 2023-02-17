@@ -54,8 +54,8 @@ function createItem(item) {
     let inputValue = inputElement.value;
 
     if (item) inputValue = item.itemName;
-    if (item && item.ticked) listElement.classList.add("ticked");
-
+    if (item && item.ticked)
+        listElement.classList.add("ticked");
 
     listElement.innerText = inputValue;
 
@@ -63,7 +63,13 @@ function createItem(item) {
     inputElement.value = "";
 
     const squareIconElement = document.createElement("div");
-    squareIconElement.innerHTML = `<i class="fa-regular fa-square"></i>`;
+
+    if (listElement.className === "ticked") {
+        squareIconElement.innerHTML = `<i class="fa-sharp fa-solid fa-square-check"></i>`;
+    } else {
+        squareIconElement.innerHTML = `<i class="fa-regular fa-square"></i>`
+    };
+
     listElement.appendChild(squareIconElement);
 
     const trashIconElement = document.createElement("div");
@@ -74,20 +80,21 @@ function createItem(item) {
     barsIconElement.innerHTML = `<i class="fas fa-bars"></i>`;
     listElement.appendChild(barsIconElement);
 
-    updateLocalStorage();
 
     /**  Toggle Tickbox: The event listener is triggered when the user clicks on the square or tick icon.
      *  The click event toggles a class in the list item which triggers CSS to change the icon from a square to a tick and cross out the list item as done.
      */
     squareIconElement.addEventListener("click", () => {
         listElement.classList.toggle("ticked");
-        if (listElement.className === "ticked") {
-            squareIconElement.innerHTML = `<i class="fa-sharp fa-solid fa-square-check"></i>`
-        } else {
-            squareIconElement.innerHTML = `<i class = "fa-regular fa-square"></i>`
-        };
-
         updateLocalStorage();
+
+        if (listElement.className === "ticked") {
+            squareIconElement.innerHTML = `<i class="fa-sharp fa-solid fa-square-check"></i>`;
+
+        } else {
+            squareIconElement.innerHTML = `<i class = "fa-regular fa-square"></i>`;
+
+        };
     });
 
     /**  Delete item using the trash can icon.
@@ -99,6 +106,7 @@ function createItem(item) {
         updateLocalStorage();
     });
 
+    updateLocalStorage();
 
 }
 
