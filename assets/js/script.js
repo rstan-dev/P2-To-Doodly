@@ -87,6 +87,7 @@ function createItem(item) {
             squareIconElement.innerHTML = `<i class = "fa-regular fa-square"></i>`
         };
 
+        updateLocalStorage();
     });
 
     /**  Delete item using the trash can icon.
@@ -94,6 +95,8 @@ function createItem(item) {
      */
     trashIconElement.addEventListener("click", () => {
         listElement.remove();
+
+        updateLocalStorage();
     });
 
 
