@@ -179,21 +179,21 @@ ul {
     opacity: 200%;
 }
 
-.items-counter-number {
+#items-counter-number {
     color: #da0428;
     font-weight: 600;
     font-size: 120%;
     padding-right: 5px;
 }
 
-.items-ticked-number {
+#items-ticked-number {
     color: #e79505;
     font-weight: 600;
     font-size: 120%;
     padding-right: 5px;
 }
 
-.items-complete-percent {
+#items-complete-percent {
     color: #35e705;
     font-weight: 600;
     font-size: 120%;
@@ -222,21 +222,21 @@ ul {
         opacity: 200%;
     }
 
-    .items-counter-number {
+    #items-counter-number {
         color: #da0428;
         font-weight: 600;
         font-size: 110%;
         padding-right: 5px;
     }
 
-    .items-ticked-number {
+    #items-ticked-number {
         color: #e79505;
         font-weight: 600;
         font-size: 110%;
         padding-right: 5px;
     }
 
-    .items-complete-percent {
+    #items-complete-percent {
         color: #35e705;
         font-weight: 600;
         font-size: 110%;
@@ -320,21 +320,21 @@ ul {
         opacity: 200%;
     }
 
-    .items-counter-number {
+    #items-counter-number {
         color: #da0428;
         font-weight: 600;
-        font-size: 110%;
+        font-size: 10%;
         padding-right: 5px;
     }
 
-    .items-ticked-number {
+    #items-ticked-number {
         color: #e79505;
         font-weight: 600;
         font-size: 110%;
         padding-right: 5px;
     }
 
-    .items-complete-percent {
+    #items-complete-percent {
         color: #35e705;
         font-weight: 600;
         font-size: 110%;

@@ -128,9 +128,23 @@ function updateLocalStorage() {
     })
 
     localStorage.setItem("todoList", JSON.stringify(todoList));
+
+    updateListCounter();
+
 }
 
 
 /**  updateListCounter - updates the number of items on the list
  * it t 
  */
+
+function updateListCounter() {
+    const itemsCounter = document.getElementById("items-counter-number");
+
+    let totalItemsCount = JSON.parse(localStorage.todoList).length;
+
+    console.log(totalItemsCount);
+
+    itemsCounter.innerText = totalItemsCount;
+
+}
