@@ -131,11 +131,13 @@ function updateLocalStorage() {
 
     updateListCounter();
 
+    updateItemsTickedCounter();
+
 }
 
 
 /**  updateListCounter - updates the number of items on the list
- * it t 
+ * it gets the length of the data array from localStorage and parses it to the innertext of the items counter 
  */
 
 function updateListCounter() {
@@ -143,8 +145,31 @@ function updateListCounter() {
 
     let totalItemsCount = JSON.parse(localStorage.todoList).length;
 
-    console.log(totalItemsCount);
-
     itemsCounter.innerText = totalItemsCount;
+}
+
+/**  updateItemsTickedCounter - updates the number of ticked items on the list
+ * it gets the data from localStorage and parses it as an array.
+ *  returns the count of objects (ticks) that have a specific value(true) for a given key("ticked")
+ * it passes this number back to the DOM via innerText
+ */
+function updateItemsTickedCounter() {
+    const totalTickedItems = document.getElementById("items-ticked-number");
+
+    let todoListData = localStorage.getItem("todoList");
+
+    let todoListArray = JSON.parse(todoListData);
+    console.log(todoListArray);
+
+    function countTicks(value, todoListArray, key) {
+        return todoListArray.reduce(function (count, item) {
+            return count + (item[key] === value);
+        }, 0);
+    }
+
+    const totalTicks = countTicks(true, todoListArray, "ticked");
+    console.log(totalTicks);
+
+    totalTickedItems.innerText = totalTicks;
 
 }
