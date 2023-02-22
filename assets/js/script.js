@@ -34,7 +34,7 @@ formElement.addEventListener("submit", (enter) => {
  */
 function displayTodoList() {
     let storageList = JSON.parse(localStorage.getItem("todoList"));
-    storageList.forEach((item) => createItem(item));
+    if (storageList) storageList.forEach((item) => createItem(item));
 }
 
 /**  createItem() Creates a new item, 
