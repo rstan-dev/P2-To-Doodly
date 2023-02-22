@@ -44,7 +44,7 @@ body {
     max-width: 950px;
     width: 80%;
     min-width: 300px;
-    height: 400px;
+    height: 410px;
     border-radius: 20px;
     margin-bottom: 20px;
 }
@@ -66,8 +66,8 @@ body {
 }
 
 .list-container {
-    margin-top: -40px;
-    height: 320px;
+
+    height: 300px;
     overflow-y: scroll;
 }
 
@@ -82,7 +82,7 @@ ul {
     border: none;
     color: #131c17;
     width: 95%;
-    margin: 2rem auto;
+    margin: 0.1rem auto;
     margin-bottom: 1rem;
     padding-left: -2rem;
 }

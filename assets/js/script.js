@@ -203,8 +203,9 @@ function calculatePercentComplete() {
 
     let percentCalculation = Math.round(totalTicks / totalItemsCount * 100);
 
-    console.log(percentCalculation);
+    let convertPercentCalNaN = Number.isNaN(percentCalculation) ? 0 : percentCalculation;
 
-    percentCompleteNumber.innerText = percentCalculation;
+    percentCompleteNumber.innerText = convertPercentCalNaN;
+
 
 }
