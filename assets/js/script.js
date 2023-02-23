@@ -2,18 +2,14 @@ const formElement = document.querySelector(".form");
 const inputElement = document.querySelector(".input-text");
 const ulElement = document.querySelector(".todo-list");
 
-
 displayTodoList();
-
-
-
 
 ///--------------------------------------------------///
 ////  Event Listeners - to listen for events 
 //// and trigger functions
 ///--------------------------------------------------///
 
-/**  Enter:  When a new item is entered into the input area 
+/**  On Press Enter:  When a new item is entered into the input area 
  *  the event listener is triggered on keying ENTER.
  *  The default "submit" action is prevented and a createItem function is triggered
  */
@@ -23,11 +19,9 @@ formElement.addEventListener("submit", (enter) => {
     createItem();
 })
 
-
 ///-----------------------------------------------------///
 ////  FUNCTIONS - to carry out certain tasks triggered by eventListeners, and other actions
 ///--------------------------------------------------///
-
 
 /**  displayTodoList() retrieves the items in localStorage 
  * it gets the items from the todoList Key, and iterates through each item and passes it to the createItem() function  
@@ -80,7 +74,6 @@ function createItem(item) {
     barsIconElement.innerHTML = `<i class="fas fa-bars"></i>`;
     listElement.appendChild(barsIconElement);
 
-
     /**  Toggle Tickbox: The event listener is triggered when the user clicks on the square or tick icon.
      *  The click event toggles a class in the list item which triggers CSS to change the icon from a square to a tick and cross out the list item as done.
      */
@@ -93,7 +86,6 @@ function createItem(item) {
 
         } else {
             squareIconElement.innerHTML = `<i class = "fa-regular fa-square"></i>`;
-
         };
     });
 
@@ -107,7 +99,6 @@ function createItem(item) {
     });
 
     updateLocalStorage();
-
 }
 
 /**  updateLocalStorage() - updates the number of items on the list
@@ -115,7 +106,6 @@ function createItem(item) {
  *  then pushes into an empty array.
  * The array is saved to localStorage
  */
-
 function updateLocalStorage() {
     const listElements = document.querySelectorAll("li");
     todoList = [];
@@ -134,9 +124,7 @@ function updateLocalStorage() {
     updateItemsTickedCounter();
 
     calculatePercentComplete();
-
 }
-
 
 /**  updateListCounter - updates the number of items on the list
  * it gets the length of the data array from localStorage and parses it to the innertext of the items counter 
@@ -148,6 +136,15 @@ function updateListCounter() {
     let totalItemsCount = JSON.parse(localStorage.todoList).length;
 
     itemsCounter.innerText = totalItemsCount;
+}
+
+/**  countTicks function
+ *   Uses reduce method to count the number of values for a given key
+ */
+function countTicks(value, todoListArray, key) {
+    return todoListArray.reduce(function (count, item) {
+        return count + (item[key] === value);
+    }, 0);
 }
 
 /**  updateItemsTickedCounter - updates the number of ticked items on the list
@@ -163,17 +160,10 @@ function updateItemsTickedCounter() {
     let todoListArray = JSON.parse(todoListData);
     console.log(todoListArray);
 
-    function countTicks(value, todoListArray, key) {
-        return todoListArray.reduce(function (count, item) {
-            return count + (item[key] === value);
-        }, 0);
-    }
-
     const totalTicks = countTicks(true, todoListArray, "ticked");
     console.log(totalTicks);
 
     totalTickedItems.innerText = totalTicks;
-
 }
 
 /**  calculatePercentComplete function
@@ -182,7 +172,6 @@ function updateItemsTickedCounter() {
  *   Uses the same method to call the total number of items from local storage
  *  Calculates % using Math.round and updates the DOM via .innerText
  */
-
 function calculatePercentComplete() {
     const percentCompleteNumber = document.getElementById("items-complete-percent");
 
@@ -190,12 +179,6 @@ function calculatePercentComplete() {
 
     let todoListArray = JSON.parse(todoListData);
     console.log(todoListArray);
-
-    function countTicks(value, todoListArray, key) {
-        return todoListArray.reduce(function (count, item) {
-            return count + (item[key] === value);
-        }, 0);
-    }
 
     const totalTicks = countTicks(true, todoListArray, "ticked");
 
@@ -206,6 +189,4 @@ function calculatePercentComplete() {
     let convertPercentCalNaN = Number.isNaN(percentCalculation) ? 0 : percentCalculation;
 
     percentCompleteNumber.innerText = convertPercentCalNaN;
-
-
 }

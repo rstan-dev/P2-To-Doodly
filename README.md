@@ -1,8 +1,9 @@
-Blank Project README template
 
-# Project Name
+# Project Name - To-Doodly
+<img src="assets/images/to-doodly-logo-hi-res3.png">
+
 * Final Screenshots create on - https://ui.dev/amiresponsive
-  <img src="">
+  <img src="assets/documents/am-i-responive.jpg">
 * [Link to Deployed Project](https://rstan-dev.github.io/P2-To-Doodly/)
 * Gitpod: use `python -m http.server` to preview in server
 
@@ -33,25 +34,38 @@ Blank Project README template
 
  ## User Experience
    ### Purpose and target audience
-   * 
+   * This useful To Do List was created as a simple way to to encourage people to stay organised and keep ontop of their tasks.  Suitable for all ages this to do list has a fun modern interface.
+
    ### User Story
-   * 
+   * The user has one screen and simple intuitive navigation.  The logo at the top is self-explanatory in a fun bubble font.  The user is encouraged to enter something to do in the input box and on hitting enter the task is added to the list below.  There is square icon, which when clicked turns into a green tick and strikes out the task showing that it has been done.  The user can click the trach icon to delete the item or they can re-order the list using the bars icon on the right hand side.
+
+   The list has been deisgned to show 5 items - in order to kep it on one screen, and any more items on the list can be accessed by using the scroll bar on the right.
+
+   Below the task list is a Producivity area.  This keeps a counter of how many items are on the list, how many items are ticked on the list, and a % completion.
 
 ## Design
+The app was conceived in Balsamiq and then designed in Canva, and the final product is very close to the original design
    ### Wireframes
-   <img src="">
+   Desktop
+   <img src="assets/documents/to-doodly-desktop-sortable-with-notes .png">
+
+   Mobile
+   <img src="assets/documents/to-doodly-mobile-sortable.png">
 
    ### Color Scheme
-   * 
+   * A black and cream color scheme was chosen for clear contrast.  White input and task area defines that task list and a green tick box was used to clearly identify what has been done.  Traffic light colors were used in the counter numbers within the productivity area.
+
+   <img src="assets/documents/canva-design1.jpg">
  
    ### Typography
-   * 
+   *  The main text font is Roboto from Google Fonts chosen for its easy readability, with sans-serif as a backup. Caveat Brush from google fonts was chosen as a fun header for the productivity area.
 
    ### Imagery
-   * 
+   * The app uses one background image which is a royalty free template from Canva.
+   <img src="assets/documents/main-background.png">  
 
    ### MVP
-   * 
+   * The minimum viable product was to have a functioning todo list that could add an item, tick and item as done and delete the item.  The items needed to be saved to local storage so they would still be available when the app was reloaded.
 
    ### Planned features
    * 
@@ -106,53 +120,4 @@ The following tests were performed on the app
   ### Acknowledgements
   * 
 
-------
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-# Walkthrough Project ReadMe template
-
-# Project name
-
-## Project Screenshot
-
-<img src="">
-
-## Link to Final Site
-* [Link to Deployed Project](<<add_deployed_link_to_project_here>>)
-* Gitpod: use `python -m http.server` to preview in server
-
-## Purpose
-* 
-
-## Credits
-* 
 
