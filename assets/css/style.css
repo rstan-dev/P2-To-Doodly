@@ -84,7 +84,7 @@ ul {
     width: 95%;
     margin: 0.1rem auto;
     margin-bottom: 1rem;
-    padding-left: -2rem;
+
 }
 
 .todo-list li {
@@ -176,7 +176,6 @@ ul {
 .items-counter-text {
     color: #fdf8db;
     font-size: 110%;
-    opacity: 200%;
 }
 
 #items-counter-number {
@@ -219,28 +218,18 @@ ul {
     .items-counter-text {
         color: #fdf8db;
         font-size: 100%;
-        opacity: 200%;
     }
 
     #items-counter-number {
-        color: #da0428;
-        font-weight: 600;
         font-size: 110%;
-        padding-right: 5px;
     }
 
     #items-ticked-number {
-        color: #e79505;
-        font-weight: 600;
         font-size: 110%;
-        padding-right: 5px;
     }
 
     #items-complete-percent {
-        color: #35e705;
-        font-weight: 600;
         font-size: 110%;
-        padding-right: 5px;
     }
 }
 
@@ -252,35 +241,19 @@ ul {
     }
 
     .todo-list li .fa-bars {
-        color: #a5a7a5;
-        position: absolute;
         right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
     }
 
     .todo-list li .fa-trash-can {
-        color: #a5a7a5;
-        position: absolute;
         right: 30px;
-        top: 50%;
-        transform: translateY(-50%);
     }
 
     .todo-list li .fa-square {
-        color: #a5a7a5;
-        position: absolute;
         right: 50px;
-        top: 50%;
-        transform: translateY(-50%);
     }
 
     .todo-list li .fa-square-check {
-        color: #35e705;
-        position: absolute;
         right: 50px;
-        top: 50%;
-        transform: translateY(-50%);
     }
 
     .calc-container p {
@@ -315,30 +288,7 @@ ul {
     }
 
     .items-counter-text {
-        color: #fdf8db;
         font-size: 90%;
-        opacity: 200%;
-    }
-
-    #items-counter-number {
-        color: #da0428;
-        font-weight: 600;
-        font-size: 110%;
-        padding-right: 5px;
-    }
-
-    #items-ticked-number {
-        color: #e79505;
-        font-weight: 600;
-        font-size: 110%;
-        padding-right: 5px;
-    }
-
-    #items-complete-percent {
-        color: #35e705;
-        font-weight: 600;
-        font-size: 110%;
-        padding-right: 5px;
     }
 
     .productivity-container {
