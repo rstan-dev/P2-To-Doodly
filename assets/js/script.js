@@ -12,7 +12,6 @@ displayTodoList();
 /**  On a change to the Input:  When a new item is entered into the input area: 
  *  the event listener checks for whitespaces at the beginning and end of the input, and replaces them with nothing
  */
-
 formElement.addEventListener("change", function () {
     let resetWhitespace = inputElement.value.trim(/\s+/g, "");
 
@@ -23,7 +22,6 @@ formElement.addEventListener("change", function () {
  *  the event listener is triggered on keying ENTER.
  *  The default "submit" action is prevented and a createItem function is triggered.
  */
-
 formElement.addEventListener("submit", (enter) => {
     enter.preventDefault();
 
@@ -35,8 +33,6 @@ formElement.addEventListener("submit", (enter) => {
     } else {
         createItem()
     }
-
-    console.log(inputValue.trim());
 })
 
 /**  ifEmptyInput() sets a rule if there is no input entered, a message appears for 3 secs
@@ -48,12 +44,14 @@ function ifEmptyInput() {
 
     setTimeout(function () {
         inputElement.placeholder = alertPlaceholderMessage;
-        inputElement.classList.add("warning-placeholder")
+        inputElement.classList.add("warning-placeholder");
+        inputElement.classList.add("warning-border")
     }, 50);
 
     setTimeout(function () {
-        inputElement.placeholder = placeholderMessage
-        inputElement.classList.remove("warning-placeholder")
+        inputElement.placeholder = placeholderMessage;
+        inputElement.classList.remove("warning-placeholder");
+        inputElement.classList.remove("warning-border")
     }, 3000);
 }
 
@@ -71,9 +69,7 @@ function displayTodoList() {
  * adds it all to the DOM,
  * then clears out the input field.  
  */
-
 function createItem(item) {
-
     const listElement = document.createElement("li");
     let inputValue = inputElement.value;
 
@@ -160,7 +156,6 @@ function updateLocalStorage() {
 /**  updateListCounter - updates the number of items on the list:
  * it gets the length of the data array from localStorage and parses it to the innertext of the items counter. 
  */
-
 function updateListCounter() {
     const itemsCounter = document.getElementById("items-counter-number");
 
@@ -189,10 +184,8 @@ function updateItemsTickedCounter() {
     let todoListData = localStorage.getItem("todoList");
 
     let todoListArray = JSON.parse(todoListData);
-    console.log(todoListArray);
 
     const totalTicks = countTicks(true, todoListArray, "ticked");
-    console.log(totalTicks);
 
     totalTickedItems.innerText = totalTicks;
 }
@@ -208,7 +201,6 @@ function calculatePercentComplete() {
     let todoListData = localStorage.getItem("todoList");
 
     let todoListArray = JSON.parse(todoListData);
-    console.log(todoListArray);
 
     const totalTicks = countTicks(true, todoListArray, "ticked");
 
