@@ -65,6 +65,10 @@ body {
     color: #a5a7a5;
 }
 
+.warning-placeholder::placeholder {
+    color: red;
+}
+
 .list-container {
 
     height: 300px;

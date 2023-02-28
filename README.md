@@ -35,7 +35,7 @@
 
    ### Purpose and target audience
 
-   * This useful To Do List was created as a simple way to to encourage people to stay organised and keep ontop of their tasks.  Suitable for all ages this to do list has a fun modern interface.
+   * This useful To Do List was created as a simple way to to encourage people to stay organised and keep on top of their tasks.  Suitable for all ages this to do list has a fun modern interface.
 
    ### User Story
 

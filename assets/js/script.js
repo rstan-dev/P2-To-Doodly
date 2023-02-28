@@ -1,5 +1,5 @@
 const formElement = document.querySelector(".form");
-const inputElement = document.querySelector(".input-text");
+let inputElement = document.querySelector(".input-text");
 const ulElement = document.querySelector(".todo-list");
 
 displayTodoList();
@@ -9,6 +9,16 @@ displayTodoList();
 //// and trigger functions.
 ///--------------------------------------------------///
 
+/**  On a change to the Input:  When a new item is entered into the input area: 
+ *  the event listener checks for whitespaces at the beginning and end of the input, and replaces them with nothing
+ */
+
+formElement.addEventListener("change", function () {
+    let resetWhitespace = inputElement.value.trim(/\s+/g, "");
+
+    inputElement.value = resetWhitespace;
+})
+
 /**  On Press Enter:  When a new item is entered into the input area 
  *  the event listener is triggered on keying ENTER.
  *  The default "submit" action is prevented and a createItem function is triggered.
@@ -16,12 +26,36 @@ displayTodoList();
 
 formElement.addEventListener("submit", (enter) => {
     enter.preventDefault();
-    createItem();
-});
 
-///-----------------------------------------------------///
-////  FUNCTIONS - to carry out certain tasks triggered by eventListeners, and other actions.
-///--------------------------------------------------///
+    let inputElement = document.querySelector(".input-text");
+    let inputValue = inputElement.value.trim()
+
+    if (inputValue == "") {
+        ifEmptyInput()
+    } else {
+        createItem()
+    }
+
+    console.log(inputValue.trim());
+})
+
+/**  ifEmptyInput() sets a rule if there is no input entered, a message appears for 3 secs
+ * reminding the user nothing was entered
+ */
+function ifEmptyInput() {
+    let placeholderMessage = inputElement.placeholder;
+    let alertPlaceholderMessage = "You have not entered anything yet...";
+
+    setTimeout(function () {
+        inputElement.placeholder = alertPlaceholderMessage;
+        inputElement.classList.add("warning-placeholder")
+    }, 50);
+
+    setTimeout(function () {
+        inputElement.placeholder = placeholderMessage
+        inputElement.classList.remove("warning-placeholder")
+    }, 3000);
+}
 
 /**  displayTodoList() retrieves the items in localStorage: 
  * it gets the items from the todoList Key, and iterates through each item and passes it to the createItem() function.
@@ -51,6 +85,7 @@ function createItem(item) {
 
     ulElement.appendChild(listElement);
     inputElement.value = "";
+    inputElement.placeholder = "Enter something to do here...";
 
     const squareIconElement = document.createElement("div");
 
