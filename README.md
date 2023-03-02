@@ -120,8 +120,8 @@ The following tests were performed on the app:
   * <img src="assets/documents/css-validation2.jpg">
 
   * JSHINT Validation - displays no erros and 35 warnings relating to ES6.  There is also 1 undefined variable which is for an empty array.  This is a requirement for the function to run.
-  * <img src="assets/documents/JSHint1.jpg">
-  * <img src="assets/documents/JSHint2.jpg">
+  * <img src="assets/documents/JSHint3.png">
+  * <img src="assets/documents/JSHint4.png">
 
   * Lighthouse Test - demonstrates excellent performance, accessibility, best practice and SEO 
   * <img src="assets/documents/lighthouse-reportjpg.jpg">
@@ -157,14 +157,15 @@ The following tests were performed on the app:
   ### Code
 
   * All the code was written for the app, however, there were various sources used to assist with prototyping.
-  * Brad Traversy - https://www.udemy.com/course/web-projects-with-vanilla-javascript/
-  * Dr Sahand Ghavidel - https://www.udemy.com/course/html-css-javascript-projects-for-beginners/
-  * Youtube tutorial - Drag & Drop List - https://www.youtube.com/watch?v=z54suepKiIU
-  * cdnjs.com - https://cdnjs.com/libraries/Sortable - for the drag and drop library code
+  * Brad Traversy - [Udemy](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
+  * Dr Sahand Ghavidel - [Udemy](https://www.udemy.com/course/html-css-javascript-projects-for-beginners/)
+  * Drag & Drop List Tutorial [Youtube](https://www.youtube.com/watch?v=z54suepKiIU)
+  * Sortable List Library code [cdnjs.com](https://cdnjs.com/libraries/Sortable)- for the drag and drop library code
   * Stack Overflow - general queries and code explanations
   * ChatGPT - general queries and code explanations
   * MDN Docs - general queries and code explanations
-  * Number.isNaN() - https://stackoverflow.com/questions/7540397/convert-nan-to-0-in-javascript
+  * Number.isNaN() - [Stackoverflow](https://stackoverflow.com/questions/7540397/convert-nan-to-0-in-javascript)
+  * How to detect and remove whitespace in a string [Stackoverflow](https://stackoverflow.com/questions/10261986/how-to-detect-string-which-contains-only-spaces)
 
   ### Content
 
@@ -181,3 +182,4 @@ The following tests were performed on the app:
   * SeanYoung_Hackteam (Code Institute) for some advice and guidance
   * Warwick Hart (Code Institute) for some advice and guidance
   * Sean Knowles for some advice and guidance
+  * Spencer Barriball my CI mentor for his suggestions, advice and encouragement
