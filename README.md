@@ -4,7 +4,6 @@
 <img src="assets/documents/am-i-responive.jpg">
 
 * [Link to Deployed Project](https://rstan-dev.github.io/P2-To-Doodly/)
-* Gitpod: use `python -m http.server` to preview in server
 
 ## Contents(#contents)
 ​
@@ -49,7 +48,7 @@
 
 The app was conceived in Balsamiq and then designed in Canva, and the final product is very close to the original design
    
-   ### Wireframes  (created in Balsamiq)
+   ### Wireframes  (created in [Balsamiq](https://balsamiq.cloud/))
 
    Desktop
    * <img src="assets/documents/to-doodly-desktop-sortable-with-notes .png">
@@ -57,7 +56,7 @@ The app was conceived in Balsamiq and then designed in Canva, and the final prod
    Mobile
    * <img src="assets/documents/to-doodly-mobile-sortable.png">
 
-   ### Color Scheme (created in Canva)
+   ### Color Scheme (created in [Canva](https://www.canva.com/))
 
    * A black and cream color scheme was chosen for clear contrast.  White input and task area defines that task list and a green tick box was used to clearly identify what has been done.  Traffic light colors were used in the counter numbers within the productivity area.
 
@@ -88,8 +87,8 @@ The app was conceived in Balsamiq and then designed in Canva, and the final prod
 
 ## Technology
 
-   * Balsamiq
-   * Canva
+   * [Balsamiq](https://balsamiq.cloud/)
+   * [Canva](https://www.canva.com/)
    * HTML
    * CSS
    * Javascript
